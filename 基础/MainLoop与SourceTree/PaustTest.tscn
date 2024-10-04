@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://6pqu5n667j23"]
+
+[ext_resource type="Script" path="res://基础/MainLoop与SourceTree/paust_test.gd" id="1_dm86g"]
+[ext_resource type="Texture2D" uid="uid://bdap0xsa3fwba" path="res://icons/icon.svg" id="2_230ro"]
+[ext_resource type="Script" path="res://基础/MainLoop与SourceTree/button.gd" id="3_qxcsw"]
+
+[node name="PaustTest" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(604, 358)
+texture = ExtResource("2_230ro")
+script = ExtResource("1_dm86g")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 513.0
+offset_top = 202.0
+offset_right = 700.0
+offset_bottom = 265.0
+text = "暂停"
+script = ExtResource("3_qxcsw")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

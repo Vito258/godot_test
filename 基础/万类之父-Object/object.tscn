@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmnnh47ovva1n"]
+
+[ext_resource type="Script" path="res://基础/万类之父-Object/object.gd" id="1_yyg8k"]
+
+[node name="Object" type="Node2D"]
+script = ExtResource("1_yyg8k")
+
+[node name="NodeChild" type="Node" parent="."]

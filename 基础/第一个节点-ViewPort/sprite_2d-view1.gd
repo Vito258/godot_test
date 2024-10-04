@@ -1,0 +1,21 @@
+extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+
+	
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if(Input.get_action_strength("玩家一-向左走")):
+		position.x -=5
+	if(Input.get_action_strength("玩家一-向右走")):
+		position.x +=5
+	if(Input.get_action_strength("玩家一-向上走")):
+		position.y -=5
+	if(Input.get_action_strength("玩家一-向下走")):
+		position.y +=5
+	pass

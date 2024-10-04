@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://diyfv1ykk6wyk"]
+
+[ext_resource type="Texture2D" uid="uid://bdap0xsa3fwba" path="res://icons/icon.svg" id="1_3tkkd"]
+[ext_resource type="Script" path="res://icon.gd" id="2_qlpr5"]
+[ext_resource type="Script" path="res://label.gd" id="3_s5qtx"]
+[ext_resource type="Texture2D" uid="uid://bgyl2qbq772nn" path="res://icons/pong-ball.png" id="4_ey3u1"]
+
+[sub_resource type="GDScript" id="GDScript_72bma"]
+script/source = "extends Area2D
+
+# 控制小球的速度
+var vec_speed:Vector2 = Vector2(5,5)
+
+#记录小球的初始位置
+var init_postion:Vector2 = Vector2(1,1)
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	position = Vector2(1,1)
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	position += vec_speed
+	if position.x >= 500:
+		reset_position()
+	pass
+
+# 小球回到初始位置的方法
+func reset_position():
+	position = init_postion
+	pass
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xn8vw"]
+radius = 18.0
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(604, 317)
+
+[node name="Area2D1" type="Node2D" parent="."]
+visible = false
+
+[node name="Icon" type="Sprite2D" parent="Area2D1"]
+position = Vector2(138, 111)
+texture = ExtResource("1_3tkkd")
+script = ExtResource("2_qlpr5")
+
+[node name="Label" type="Label" parent="Area2D1"]
+offset_left = 326.0
+offset_top = 34.0
+offset_right = 699.0
+offset_bottom = 95.0
+script = ExtResource("3_s5qtx")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(-2, 1)
+script = SubResource("GDScript_72bma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(1, -1)
+shape = SubResource("CircleShape2D_xn8vw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
+position = Vector2(-1, 5)
+scale = Vector2(0.0729534, 0.0734127)
+texture = ExtResource("4_ey3u1")

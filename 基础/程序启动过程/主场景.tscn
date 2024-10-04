@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqjrfxgujki6c"]
+
+[ext_resource type="Script" path="res://基础/程序启动过程/主场景.gd" id="1_qsqfk"]
+
+[node name="主场景" type="Node2D"]
+script = ExtResource("1_qsqfk")

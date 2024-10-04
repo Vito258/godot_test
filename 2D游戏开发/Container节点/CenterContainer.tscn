@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://da2rromf4ee5m"]
+
+[ext_resource type="Texture2D" uid="uid://bdap0xsa3fwba" path="res://icons/icon.svg" id="1_m0ph4"]
+
+[node name="CenterContainer" type="CenterContainer"]
+offset_right = 379.0
+offset_bottom = 317.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_m0ph4")

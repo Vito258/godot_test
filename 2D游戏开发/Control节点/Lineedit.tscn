@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://grff1uykq44n"]
+
+[ext_resource type="Script" path="res://2D游戏开发/Control节点/lineedit.gd" id="1_wkx8m"]
+
+[node name="Node2D" type="Node"]
+script = ExtResource("1_wkx8m")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 291.0
+offset_top = 108.0
+offset_right = 583.0
+offset_bottom = 147.0
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+offset_left = 290.0
+offset_top = 168.0
+offset_right = 586.0
+offset_bottom = 205.0
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="text_submitted" from="LineEdit2" to="." method="_on_line_edit_2_text_submitted"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b40gjiw5qhffs"]
+
+[ext_resource type="Texture2D" uid="uid://csd27a601qe8o" path="res://icons/sword.jpg" id="1_weqsv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1cf1l"]
+
+[node name="PanelContainer" type="PanelContainer"]
+theme_override_styles/panel = SubResource("StyleBoxTexture_1cf1l")
+
+[node name="Sword" type="Sprite2D" parent="."]
+position = Vector2(579.5, 323.75)
+scale = Vector2(0.1149, 0.117996)
+texture = ExtResource("1_weqsv")

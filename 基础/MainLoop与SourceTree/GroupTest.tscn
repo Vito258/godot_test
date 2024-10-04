@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh2u1cqphj2o2"]
+
+[ext_resource type="Script" path="res://基础/MainLoop与SourceTree/node_1.gd" id="1_angex"]
+[ext_resource type="Script" path="res://基础/MainLoop与SourceTree/group_test.gd" id="1_h62xj"]
+[ext_resource type="Script" path="res://基础/MainLoop与SourceTree/node_2.gd" id="2_ddpos"]
+
+[node name="GroupTest" type="Node2D"]
+script = ExtResource("1_h62xj")
+
+[node name="Node1" type="Node" parent="." groups=["Group1"]]
+script = ExtResource("1_angex")
+
+[node name="Node2" type="Node" parent="." groups=["Group1"]]
+script = ExtResource("2_ddpos")

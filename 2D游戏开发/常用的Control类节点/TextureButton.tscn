@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://uoq8uv1a340u"]
+
+[ext_resource type="Texture2D" uid="uid://sp6p7mirfp4g" path="res://icons/Sun_Pixel.png" id="1_a21ar"]
+[ext_resource type="Script" path="res://2D游戏开发/常用的Control类节点/texture_button.gd" id="1_r8n5n"]
+
+[node name="TextureButton" type="TextureButton"]
+offset_right = 128.0
+offset_bottom = 128.0
+texture_normal = ExtResource("1_a21ar")
+script = ExtResource("1_r8n5n")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

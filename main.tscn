@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://616bfpggx8bb"]
+
+[ext_resource type="Texture2D" uid="uid://bdap0xsa3fwba" path="res://icons/icon.svg" id="1_51syc"]
+[ext_resource type="Script" path="res://icon.gd" id="2_qfxaf"]
+[ext_resource type="Script" path="res://label.gd" id="3_pr6uy"]
+[ext_resource type="Texture2D" uid="uid://bgyl2qbq772nn" path="res://icons/pong-ball.png" id="4_jpls0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xn8vw"]
+radius = 226.002
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(16352, 12702)
+
+[node name="Area2D1" type="Node2D" parent="."]
+visible = false
+
+[node name="Icon" type="Sprite2D" parent="Area2D1"]
+position = Vector2(138, 111)
+texture = ExtResource("1_51syc")
+script = ExtResource("2_qfxaf")
+
+[node name="Label" type="Label" parent="Area2D1"]
+offset_left = 326.0
+offset_top = 34.0
+offset_right = 699.0
+offset_bottom = 95.0
+script = ExtResource("3_pr6uy")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(65, 188)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(272, 46)
+shape = SubResource("CircleShape2D_xn8vw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
+position = Vector2(253, 129)
+texture = ExtResource("4_jpls0")

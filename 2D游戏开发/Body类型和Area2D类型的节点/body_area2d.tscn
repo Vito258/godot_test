@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://c63p5s1f3hb4c"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://c1reag2exvhsx" path="res://2D游戏开发/Body类型和Area2D类型的节点/body_area2d.tres" id="1_fpky8"]
+[ext_resource type="Shape2D" uid="uid://cpixxne7pp1fe" path="res://2D游戏开发/Body类型和Area2D类型的节点/new_circle_shape_2d.tres" id="2_fvj1o"]
+[ext_resource type="Texture2D" uid="uid://bdap0xsa3fwba" path="res://icons/icon.svg" id="3_3honc"]
+[ext_resource type="Script" path="res://2D游戏开发/Body类型和Area2D类型的节点/character_body_2d_2.gd" id="3_36g06"]
+[ext_resource type="Script" path="res://2D游戏开发/Body类型和Area2D类型的节点/area_2d.gd" id="5_h8jh8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3khqq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w5gwy"]
+radius = 48.0416
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sogxw"]
+radius = 43.566
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gn52r"]
+size = Vector2(125, 124)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qj3il"]
+
+[node name="BodyArea2d" type="StaticBody2D"]
+physics_material_override = ExtResource("1_fpky8")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(731.327, 208.123)
+scale = Vector2(1.0932, 1.02191)
+polygon = PackedVector2Array(376.183, 5.34639, 201.771, 30.5508, 222.29, -116.857, -148.763, 46.59, -520.672, 5.34639, -82.9313, 106.928)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(825, 51)
+shape = ExtResource("2_fvj1o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(10, 29)
+scale = Vector2(0.980769, 0.962191)
+polygon = PackedVector2Array(45, 201, 41, 606, 111, 606, 119, 201)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="StaticBody2D"]
+collision_mask = 113
+physics_material_override = SubResource("PhysicsMaterial_3khqq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/RigidBody2D"]
+position = Vector2(92, 49)
+shape = SubResource("CircleShape2D_w5gwy")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="StaticBody2D"]
+position = Vector2(64, 116)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/RigidBody2D2"]
+position = Vector2(194, -72)
+shape = SubResource("CircleShape2D_sogxw")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+script = ExtResource("3_36g06")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(492.5, 74)
+shape = SubResource("RectangleShape2D_gn52r")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
+position = Vector2(492, 74)
+texture = ExtResource("3_3honc")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_h8jh8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(124, -104)
+polygon = PackedVector2Array(623, 766, 957, 660, 621, 856, 591.13, 838.429, 281, 656)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Area2D"]
+position = Vector2(746, 490)
+physics_material_override = SubResource("PhysicsMaterial_qj3il")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D/RigidBody2D"]
+position = Vector2(-164, 2)
+polygon = PackedVector2Array(45, -14, 271, -16, 197, -76, 199, 32, 57, -2)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

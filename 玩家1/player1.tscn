@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://r3yc3ryhmdy8"]
+
+[ext_resource type="Script" path="res://玩家1/player1.gd" id="1_8uhnw"]
+[ext_resource type="Texture2D" uid="uid://b6t5m4g5jpvsl" path="res://icons/racket.png" id="1_ytlp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pkui"]
+size = Vector2(11, 81)
+
+[node name="Player" type="Area2D"]
+position = Vector2(38, 42)
+script = ExtResource("1_8uhnw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.99998, 3.99998)
+scale = Vector2(0.068254, 0.108151)
+texture = ExtResource("1_ytlp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2pkui")

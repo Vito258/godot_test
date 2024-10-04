@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd30fqgji03s7"]
+
+[ext_resource type="Texture2D" uid="uid://bdap0xsa3fwba" path="res://icons/icon.svg" id="1_obqyh"]
+[ext_resource type="Script" path="res://基础/程序启动过程/副场景.gd" id="1_oc8ec"]
+
+[node name="副场景" type="Sprite2D"]
+texture = ExtResource("1_obqyh")
+script = ExtResource("1_oc8ec")

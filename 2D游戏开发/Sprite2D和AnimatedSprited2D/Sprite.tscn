@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://d1wa36853fd4x"]
+
+[ext_resource type="Script" path="res://2D游戏开发/Sprite2D和AnimatedSprited2D/sprite_2d.gd" id="1_f22ux"]
+[ext_resource type="Texture2D" uid="uid://dc0t7ylc43lxg" path="res://icons/MR Cookies_Attack01_48x48.png" id="2_reak0"]
+[ext_resource type="Script" path="res://2D游戏开发/Sprite2D和AnimatedSprited2D/animated_sprite_2d.gd" id="3_w55ht"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n3de"]
+atlas = ExtResource("2_reak0")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oinyi"]
+atlas = ExtResource("2_reak0")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6km27"]
+atlas = ExtResource("2_reak0")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhbj8"]
+atlas = ExtResource("2_reak0")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o6cb"]
+atlas = ExtResource("2_reak0")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5ts5"]
+atlas = ExtResource("2_reak0")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k44br"]
+atlas = ExtResource("2_reak0")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6jlnb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n3de")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oinyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6km27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhbj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3o6cb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5ts5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k44br")
+}],
+"loop": true,
+"name": &"cat_attack",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Sptite" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+script = ExtResource("1_f22ux")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(396, 166)
+scale = Vector2(2.66667, 2.70833)
+sprite_frames = SubResource("SpriteFrames_6jlnb")
+animation = &"cat_attack"
+frame = 6
+frame_progress = 1.0
+script = ExtResource("3_w55ht")

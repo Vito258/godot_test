@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnaih7tfma6p3"]
+
+[ext_resource type="Texture2D" uid="uid://bdap0xsa3fwba" path="res://icons/icon.svg" id="1_2gv17"]
+
+[node name="GridContainer" type="GridContainer"]
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 11
+columns = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_2gv17")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_2gv17")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_2gv17")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_2gv17")
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_2gv17")
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_2gv17")
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_2gv17")
+
+[node name="TextureRect8" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_2gv17")
+
+[node name="TextureRect9" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_2gv17")

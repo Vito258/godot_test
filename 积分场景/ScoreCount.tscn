@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://kf8cfn1c1i73"]
+
+[ext_resource type="Script" path="res://积分场景/player1_count.gd" id="1_20exr"]
+[ext_resource type="Script" path="res://积分场景/player2_count.gd" id="2_wnyi8"]
+
+[node name="Node" type="Node"]
+metadata/_edit_horizontal_guides_ = [63.0]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 116.0
+offset_top = 62.0
+offset_right = 228.0
+offset_bottom = 107.0
+script = ExtResource("1_20exr")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 933.0
+offset_top = 63.0
+offset_right = 1049.0
+offset_bottom = 109.0
+script = ExtResource("2_wnyi8")

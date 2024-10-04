@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm8xllan3e0f0"]
+
+[ext_resource type="Script" path="res://玩家2/player2.gd" id="1_a81yd"]
+[ext_resource type="Texture2D" uid="uid://b6t5m4g5jpvsl" path="res://icons/racket.png" id="2_788oy"]
+[ext_resource type="AudioStream" uid="uid://ccg06lugamxgp" path="res://soundEffect/乒乓球拍击.mp3" id="3_qkrkr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pkui"]
+size = Vector2(11, 81)
+
+[node name="Player" type="Area2D"]
+position = Vector2(1120, 43)
+script = ExtResource("1_a81yd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.99998, 3.99998)
+scale = Vector2(0.068254, 0.108151)
+texture = ExtResource("2_788oy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2pkui")
+
+[node name="SoundEffect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qkrkr")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

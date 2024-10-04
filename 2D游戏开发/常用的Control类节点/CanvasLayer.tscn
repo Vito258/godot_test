@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp0a8fny2b2hj"]
+
+[ext_resource type="Texture2D" uid="uid://bdap0xsa3fwba" path="res://icons/icon.svg" id="1_q2vwd"]
+[ext_resource type="Texture2D" uid="uid://sp6p7mirfp4g" path="res://icons/Sun_Pixel.png" id="2_uikfj"]
+
+[node name="Node" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+z_index = 9
+z_as_relative = false
+position = Vector2(0, -4)
+texture = ExtResource("1_q2vwd")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(126, 92)
+texture = ExtResource("2_uikfj")

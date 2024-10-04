@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdbpvk3hbwqym"]
+
+[ext_resource type="Texture2D" uid="uid://bdap0xsa3fwba" path="res://icons/icon.svg" id="1_4k87s"]
+[ext_resource type="Script" path="res://2D游戏开发/Canvasltem与Node2D节点/sprite_2d.gd" id="2_qh6gl"]
+
+[node name="CanvasItem" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(552, 309)
+texture = ExtResource("1_4k87s")
+script = ExtResource("2_qh6gl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(390, -2)
+texture = ExtResource("1_4k87s")
